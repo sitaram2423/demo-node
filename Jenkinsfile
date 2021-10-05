@@ -1,6 +1,6 @@
 pipeline { 
     environment {
-    registry = "sandeepbinaylal/demo-node-project"
+    registry = "sitaramreddy/node-build"
     registryCredential = 'dockerhub'
     dockerImage = ''
   }  
@@ -8,7 +8,7 @@ pipeline {
   stages {
       stage('Cloning Git') {
           steps {
-             git 'https://github.com/SundeepBinaylal/demo-node.git'
+             git 'https://github.com/sitaram2423/demo-node.git'
            }
  }
     stage('Building image') {
