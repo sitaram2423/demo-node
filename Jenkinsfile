@@ -1,6 +1,6 @@
 pipeline { 
     environment {
-    registry = "sitaramreddy/node-build"
+    registry = "sitaramreddy/k8s-jenkins-demo"
     registryCredential = 'dockerhub'
     dockerImage = ''
   }  
@@ -32,5 +32,16 @@ pipeline {
         sh "docker rmi $registry:$BUILD_NUMBER"
       }
     }
+    stage('deploying to k8s-cluster') {
+      steps{
+        script {
+           kubernetesDeploy {
+                    configs: 'k8s-deploy.yml',
+                    kubeconfigId: 'kubeConfig'
+                    enableConfigSubstitution: true
+    }
+   }
   }
+ }
+}
 }
