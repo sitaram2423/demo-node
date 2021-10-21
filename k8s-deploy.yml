@@ -27,7 +27,8 @@ spec:
     selector:
          app: front-end
     type: NodePort
-    ports: 8888
-    targetport: 8888
-    nodeport: 30005
-
+    ports: 
+     - port: 8888
+       targetport: 8888
+       nodeport: 30005
+                                                                                                                                                                                                                           
