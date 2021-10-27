@@ -37,7 +37,7 @@ pipeline {
         script {
            kubernetesDeploy {
                     configs: 'k8s-deploy.yml',
-                    kubeconfigId: 'kubeConfig',
+                    kubeconfigId: 'kubeconfig',
                     enableConfigSubstitution: true
     }
    }
