@@ -14,8 +14,8 @@ spec:
             app: front-end
      spec:
        containers:
-            name: ctr1
-            image: sitaramreddy/k8s-jenkins-demo:1
+           - name: ctr1
+             image: sitaramreddy/k8s-jenkins-demo:1
   
 
 ---
