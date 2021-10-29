@@ -7,14 +7,14 @@ spec:
   replicas: 4
   selector:
      matchLabels:
-            app: front-end
+            app: app-end
   template:
      metadata:
          labels:
-            app: front-end
+            app: app-end
      spec:
        containers:
-           - name: ctr1
+           - name: ctr123
              image: sitaramreddy/k8s-jenkins-demo:1
   
 
