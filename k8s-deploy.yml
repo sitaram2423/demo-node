@@ -15,7 +15,7 @@ spec:
      spec:
        containers:
            - name: ctr1
-             image: sitaramreddy/k8s-jenkins-demo:18
+             image: sitaramreddy/k8s-jenkins-demo:1
   
 
 ---
